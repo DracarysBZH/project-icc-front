@@ -1,3 +1,227 @@
-<p>
-  api works!
-</p>
+<div class="container-fluid">
+
+  <div class="row text-center mt-5">
+    <div class="col">
+      <h1>{{ title }}</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8 offset-2 mt-5">
+      <ngb-tabset type="pills" justify="center" (tabChange)="getApiLink($event)">
+        <ngb-tab title="/hiking" id="/hiking/921410">
+          <ng-template ngbTabContent>
+            <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
+              <div class="container-fluid">
+                <div class="col-6 offset-3 align-middle description">
+                  <table class="table table-bordered text-center">
+                    <tbody>
+                      <tr>
+                        <td>:id</td>
+                        <td>Exemple: 921410</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="/extract" id="/extract">
+          <ng-template ngbTabContent>
+            <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
+              <div class="container-fluid">
+                <div class="col-6 offset-3 align-middle description">
+                  <table class="table table-bordered text-center">
+                    <tbody>
+                      <tr>
+                        <td>:id</td>
+                        <td>Exemple: 921410</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="/geolocalize" id="/geolocalize">
+          <ng-template ngbTabContent>
+            <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
+              <div class="container-fluid">
+                <div class="col-6 offset-3 align-middle description">
+                  <table class="table table-bordered text-center">
+                    <tbody>
+                      <tr>
+                        <td>:id</td>
+                        <td>Exemple: 921410</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="/utm" id="/utm">
+          <ng-template ngbTabContent>
+            <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
+              <div class="container-fluid">
+                <div class="col-6 offset-3 align-middle description">
+                  <table class="table table-bordered text-center">
+                    <tbody>
+                      <tr>
+                        <td>:id</td>
+                        <td>Exemple: 921410</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="/images" id="/images">
+          <ng-template ngbTabContent>
+            <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
+              <div class="container-fluid">
+                <div class="col-6 offset-3 align-middle description">
+                  <table class="table table-bordered text-center">
+                    <tbody>
+                      <tr>
+                        <td>:id</td>
+                        <td>Exemple: 921410</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="/tiles" id="/tiles">
+          <ng-template ngbTabContent>
+            <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
+              <div class="container-fluid">
+                <div class="col-6 offset-3 align-middle description">
+                  <table class="table table-bordered text-center">
+                    <tbody>
+                      <tr>
+                        <td>:id</td>
+                        <td>Exemple: 921410</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="/save" id="/save">
+          <ng-template ngbTabContent>
+            <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
+              <div class="container-fluid">
+                <div class="col-6 offset-3 align-middle description">
+                  <table class="table table-bordered text-center">
+                    <tbody>
+                      <tr>
+                        <td>:id</td>
+                        <td>Exemple: 921410</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="/metadata" id="/metadata">
+          <ng-template ngbTabContent>
+            <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
+              <div class="container-fluid">
+                <div class="col-6 offset-3 align-middle description">
+                  <table class="table table-bordered text-center">
+                    <tbody>
+                      <tr>
+                        <td>:id</td>
+                        <td>Exemple: 921410</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+        <ngb-tab title="/elasticsearch" id="/elasticsearch">
+          <ng-template ngbTabContent>
+            <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
+              <div class="container-fluid">
+                <div class="col-6 offset-3 align-middle description">
+                  <table class="table table-bordered text-center">
+                    <tbody>
+                      <tr>
+                        <td>:id</td>
+                        <td>Exemple: 921410</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-tab>
+      </ngb-tabset>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-8 offset-2 mt-3 mb-3">
+      <form (ngSubmit)="onSubmit()" >
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="backEndUrl">{{ backEndUrl }}</span>
+          </div>
+          <input type="text" class="form-control" aria-describedby="backEndUrl" name="apiLink" [(ngModel)]="apiLink">
+          <div class="input-group-append" id="button-addon4">
+            <button class="btn btn-outline-primary" type="submit">Submit</button>
+          </div>
+        </div>
+        <!--<div class="input-group" *ngIf="body">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Body</span>
+          </div>
+          <textarea class="form-control" aria-label="With textarea" name="bodyRequest" [(ngModel)]="bodyRequest"></textarea>
+        </div>-->
+        <div class="form-group" *ngIf="body">
+          <span class="input-group-text">Body</span>
+          <ngx-monaco-editor class="my-code-editor" [options]="editorOptions" [(ngModel)]="bodyRequest" name="bodyRequest" ></ngx-monaco-editor>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="jsonResponse != null">
+    <div class="col text-center">
+      <button type="button" class="btn btn-outline-secondary" (click)="copyToClipBoard()">Copy to clipboard the response</button>
+      <button type="button" class="btn btn-outline-secondary ml-1" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">View raw</button>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="jsonResponse != null">
+    <div id="collapseExample" [ngbCollapse]="isCollapsed" class="col-8 offset-2 mt-2">
+      <div class="card">
+        <div class="card-body">
+          <pre>{{ jsonResponse | json }}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="jsonResponse != null">
+    <div class="col-8 offset-2 shadow p-3 mb-5 mt-3 bg-white rounded">
+      <ngx-json-viewer [json]="jsonResponse"></ngx-json-viewer>
+    </div>
+  </div>
+
+</div>
