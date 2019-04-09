@@ -36,7 +36,8 @@ export class ApiComponent implements OnInit {
     minimap: {
       enabled: false
     },
-    wordWrap: "on"
+    wordWrap: "on",
+    formatOnPaste: "true"
   };
 
   constructor(private httpClient: HttpClient) { }
