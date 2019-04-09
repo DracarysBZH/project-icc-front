@@ -32,6 +32,7 @@
             <div class="jumbotron jumbotron-fluid pt-2 pb-1 mt-4">
               <div class="container-fluid description">
                 Exemple de body :
+                <hr>
                 <pre>
 {{ '{' }}
   "description": "chantage matinal : pas de sortie famille sans myrtille ont prétexte les grands.sur les conseils de panic, je reste su' l'idée d'aller au lac de Maucapera, en mode recup.au total, truites, baignade, pique nique et belle cueillette de myrtilles et framboises.y'en a eu pour tout le monde!!!!!depuis le pont de Budearous, montée rive droite vers la cabane de Peyrahite, puis de Maucapera  et enfin le lac.descente rive gauche du déversoir en restant toujours gauche jusqu'au parking.sec",
@@ -45,24 +46,40 @@
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
               <div class="container-fluid description">
-                Exemple de body :
-<pre>
-{{ '{' }}
+                <div class="row">
+                  <div class="col-6">
+                    Exemple de body :
+                    <hr>
+                    <pre>{{ '{' }}
   "entities": [
     "http://fr.dbpedia.org/resource/Lac",
-    "http://fr.dbpedia.org/resource/Famille_(biologie)",
     "http://fr.dbpedia.org/resource/Paris"
   ]
 {{ '}' }}</pre>
+                  </div>
+                  <div class="col-6">
+                    Exemple d'erreur de retour :
+                    <hr>
+                    Si les entités sont vide :
+                    <pre>{{ '{' }}
+  "status": "no entities key found in json"
+{{ '}' }}</pre>
+                    Si aucunes coordonnées n'exite pour les entités fournis :
+                    <pre>{{ '{' }}
+  "status": "no coordinates found"
+{{ '}' }}</pre>
+                  </div>
                 </div>
               </div>
-            </ng-template>
-          </ngb-tab>
+            </div>
+          </ng-template>
+        </ngb-tab>
         <ngb-tab title="/utm" id="/utm">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
               <div class="container-fluid description">
                 Exemple de body :
+                <hr>
                 <pre>{{ '{' }}
   "coords": [
     {{ '{' }}
@@ -80,8 +97,11 @@
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
               <div class="container-fluid description">
-                Exemple de body : 
-                <pre>{{ '{' }}
+                <div class="row">
+                  <div class="col-3">
+                    Exemple de body :
+                    <hr>
+                    <pre>{{ '{' }}
   "boundingbox": {{ '{' }}
     "ne": {{ '{' }}
       "lng": 2.351828,
@@ -94,24 +114,50 @@
     {{ '}' }}
   {{ '}' }}
 {{ '}' }}</pre>
+                  </div>
+                  <div class="col-5">
+                    Exemple de retour :
+                    <hr>
+                    L'image va être téléchargé :
+                    <pre>{{ '{' }}
+  "name": "name",
+  "status": "Images found, wait for the download"
+{{ '}' }}</pre>
+                    L'image est en cours de téléchargement :
+                    <pre>{{ '{' }}
+  "name": "name",
+  "status": "Image is already downloading"
+{{ '}' }}</pre>
+                  </div>
+                  <div class="col-4">
+                    L'image est téléchargé :
+                    <pre>{{ '{' }}
+  "name": "name",
+  "status": "Image already downloaded"
+{{ '}' }}</pre>
+                  Le format du json est incorrect :
+                  <pre>{{ '{' }}
+  "status": "Wrong json format for coords"
+{{ '}' }}</pre>
+                  Aucune images n'existe dans PEPS :
+                  <pre>{{ '{' }}
+  "status": "No images found on peps"
+{{ '}' }}</pre>
+                  </div>
+                </div>
               </div>
             </div>
           </ng-template>
         </ngb-tab>
-        <ngb-tab title="/tiles" id="/tiles">
+        <ngb-tab title="/tiles/status" id="/tiles/status">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
-              <div class="container-fluid">
-                <div class="col-6 offset-3 align-middle description">
-                  <table class="table table-bordered text-center">
-                    <tbody>
-                      <tr>
-                        <td>:id</td>
-                        <td>Exemple: 921410</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div class="container-fluid description">
+                Exemple de body :
+                <pre>{{ '{' }}
+  "name": "5c7aaa87-a69a-53e4-a95d-1d02249849df",
+  "status": "Image already downloaded"
+{{ '}' }}</pre>
               </div>
             </div>
           </ng-template>
