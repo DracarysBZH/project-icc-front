@@ -9,8 +9,6 @@ import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { AppComponent } from './app.component';
 import { ApiComponent } from './api/api.component';
 
-import { AppRoutingModule }     from './app-routing.module';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +16,6 @@ import { AppRoutingModule }     from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     NgbModule,
     FormsModule,
     NgxJsonViewerModule,
