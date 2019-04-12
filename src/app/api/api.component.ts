@@ -44,7 +44,7 @@ export class ApiComponent implements OnInit {
 
   getApiLink(ngbTabChangeEvent: NgbTabChangeEvent){
     this.apiLink = ngbTabChangeEvent.nextId;
-    this.body = !(this.apiLink == "/hiking/921410");
+    this.body = !(this.apiLink == "/hiking/921410" || this.apiLink == "/tiles/status/");
     this.jsonResponse = null;
     this.bodyRequest = null;
   }

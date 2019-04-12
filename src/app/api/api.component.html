@@ -9,24 +9,21 @@
   <div class="row">
     <div class="col-8 offset-2 mt-2">
       <ngb-tabset type="pills" justify="center" (tabChange)="getApiLink($event)">
+
         <ngb-tab title="/hiking" id="/hiking/921410">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-1 mt-4">
-              <div class="container-fluid">
-                <div class="col-6 offset-3 align-middle description">
-                  <table class="table table-bordered text-center">
-                    <tbody>
-                      <tr>
-                        <td>:id</td>
-                        <td>Exemple: 921410</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div class="container-fluid description">
+                Fonctionnement de la route :
+                <hr>
+                /hiking/id avec <span class="font-weight-bold">id</span> correspondant à l'id d'un chemin de randonnées.
+                <br><br>
+                Exemple: <pre>/hiking/921410</pre>
               </div>
             </div>
           </ng-template>
         </ngb-tab>
+
         <ngb-tab title="/extract" id="/extract">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-1 mt-4">
@@ -42,6 +39,7 @@
             </div>
           </ng-template>
         </ngb-tab>
+
         <ngb-tab title="/geolocalize" id="/geolocalize">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
@@ -53,7 +51,8 @@
                     <pre>{{ '{' }}
   "entities": [
     "http://fr.dbpedia.org/resource/Lac",
-    "http://fr.dbpedia.org/resource/Paris"
+    "http://fr.dbpedia.org/resource/Paris",
+    "http://fr.dbpedia.org/resource/Pau"
   ]
 {{ '}' }}</pre>
                   </div>
@@ -74,6 +73,7 @@
             </div>
           </ng-template>
         </ngb-tab>
+
         <ngb-tab title="/utm" id="/utm">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
@@ -86,6 +86,11 @@
       "latitude": "48.856578",
       "longitude": "2.351828",
       "uri": "http://fr.dbpedia.org/resource/Paris"
+    {{ '}' }},
+    {{ '{' }}
+        "latitude": "43.3017",
+        "longitude": "-0.3686",
+        "uri": "http://fr.dbpedia.org/resource/Pau"
     {{ '}' }}
   ]
 {{ '}' }}</pre>
@@ -93,6 +98,7 @@
             </div>
           </ng-template>
         </ngb-tab>
+
         <ngb-tab title="/images" id="/images">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
@@ -106,11 +112,10 @@
     "ne": {{ '{' }}
       "lng": 2.351828,
       "lat": 48.856578
-
     {{ '}' }},
     "sw": {{ '{' }}
-      "lng": 2.351828,
-      "lat": 48.856578
+      "lng": -0.3686,
+      "lat": 43.3017
     {{ '}' }}
   {{ '}' }}
 {{ '}' }}</pre>
@@ -149,37 +154,59 @@
             </div>
           </ng-template>
         </ngb-tab>
-        <ngb-tab title="/tiles/status" id="/tiles/status">
+
+        <ngb-tab title="/tiles" id="/tiles">
+          <ng-template ngbTabContent>
+            <ngb-tabset type="pills" justify="center" (tabChange)="getApiLink($event)" class="col">
+              <ngb-tab title="/tiles" id="/tiles">
+                <ng-template ngbTabContent>
+                  <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
+                    <div class="container-fluid description">
+                      Exemple de body :
+                      <hr>
+                      <pre>{{ '{' }}
+  "name": "45646132-f1e6-51b5-8be7-eb17d8171c5f",
+  "status": "Image already downloaded"
+{{ '}' }}</pre>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-tab>
+
+              <ngb-tab title="/tiles/status/" id="/tiles/status/">
+                <ng-template ngbTabContent>
+                  <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
+                    <div class="container-fluid description">
+                      Fonctionnement de la route :
+                      <hr>
+                      /tiles/status/name avec <span class="font-weight-bold">name</span> correspondant au name d'une image.
+                      <br><br>
+                      Exemple : <pre>/tiles/status/45646132-f1e6-51b5-8be7-eb17d8171c5f</pre>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-tab>
+            </ngb-tabset>
+
+          </ng-template>
+        </ngb-tab>
+
+        <ngb-tab title="/save" id="/save">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
               <div class="container-fluid description">
                 Exemple de body :
+                <hr>
                 <pre>{{ '{' }}
-  "name": "5c7aaa87-a69a-53e4-a95d-1d02249849df",
-  "status": "Image already downloaded"
+    "imgName": "45646132-f1e6-51b5-8be7-eb17d8171c5f",
+    "status": "Tiles are totally computed !",
+    "statusCode": "TOTALLY_COMPUTED"
 {{ '}' }}</pre>
               </div>
             </div>
           </ng-template>
         </ngb-tab>
-        <ngb-tab title="/save" id="/save">
-          <ng-template ngbTabContent>
-            <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
-              <div class="container-fluid">
-                <div class="col-6 offset-3 align-middle description">
-                  <table class="table table-bordered text-center">
-                    <tbody>
-                      <tr>
-                        <td>:id</td>
-                        <td>Exemple: 921410</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </ng-template>
-        </ngb-tab>
+
         <ngb-tab title="/metadata" id="/metadata">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
@@ -198,6 +225,7 @@
             </div>
           </ng-template>
         </ngb-tab>
+
         <ngb-tab title="/elasticsearch" id="/elasticsearch">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
@@ -216,6 +244,7 @@
             </div>
           </ng-template>
         </ngb-tab>
+
       </ngb-tabset>
     </div>
   </div>
