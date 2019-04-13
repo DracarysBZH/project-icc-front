@@ -269,7 +269,7 @@
         </div>-->
         <div class="form-group" *ngIf="body">
           <span class="input-group-text">Body</span>
-          <ngx-monaco-editor class="my-code-editor" [options]="editorOptions" [(ngModel)]="bodyRequest" name="bodyRequest" ></ngx-monaco-editor>
+          <ngx-monaco-editor class="my-code-editor" [options]="editorOptions" [(ngModel)]="bodyRequest" name="bodyRequest" (change)="bodyRequestChange()"></ngx-monaco-editor>
         </div>
       </form>
     </div>

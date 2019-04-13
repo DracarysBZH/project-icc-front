@@ -18,7 +18,7 @@ const httpOptions = {
 })
 export class ApiComponent implements OnInit {
 
-  public title = "Projet ICC 2k19"
+  public title = "Projet ICC 2k19";
   public backEndUrl = environment.backEndUrl;
   public isCollapsed = true;
 
@@ -29,6 +29,17 @@ export class ApiComponent implements OnInit {
   // Body bodyRequest
   public bodyRequest = "";
   public body = false;
+
+  public mapBodyRequest = {
+    "/extract": "",
+    "/geolocalize": "",
+    "/utm": "",
+    "/images": "",
+    "/tiles": "",
+    "/save": "",
+    "/metadata": "",
+    "/elasticsearch": ""
+  };
 
   editorOptions = {
     theme: 'vs-dark',
@@ -46,7 +57,7 @@ export class ApiComponent implements OnInit {
     this.apiLink = ngbTabChangeEvent.nextId;
     this.body = !(this.apiLink == "/hiking/921410" || this.apiLink == "/tiles/status/");
     this.jsonResponse = null;
-    this.bodyRequest = null;
+    this.bodyRequest = this.mapBodyRequest[this.apiLink];
   }
 
   onSubmit(){
@@ -65,6 +76,10 @@ export class ApiComponent implements OnInit {
         error => this.jsonResponse = { "error": error.error }
       );
     }
+  }
+
+  bodyRequestChange(){
+    this.mapBodyRequest[this.apiLink] = this.bodyRequest;
   }
 
   copyToClipBoard(){
