@@ -51,14 +51,14 @@ export class ApiComponent implements OnInit {
 
   onSubmit(){
     if (this.body) {
-      this.httpClient.post("http://" + window.location.hostname + ":9001" + this.apiLink, this.bodyRequest, httpOptions).subscribe(
+      this.httpClient.post(environment.backEndUrl + this.apiLink, this.bodyRequest, httpOptions).subscribe(
         res => {
           this.jsonResponse = res;
         },
         error => this.jsonResponse = { "error": error.error }
       );
     } else {
-      this.httpClient.get("http://" + window.location.hostname + ":9001" + this.apiLink).subscribe(
+      this.httpClient.get(environment.backEndUrl + this.apiLink).subscribe(
         res => {
           this.jsonResponse = res;
         },
