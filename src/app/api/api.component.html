@@ -10,7 +10,7 @@
     <div class="col-8 offset-2 mt-2">
       <ngb-tabset type="pills" justify="center" (tabChange)="getApiLink($event)">
 
-        <ngb-tab title="/hiking" id="/hiking/921410">
+        <ngb-tab title="/hiking" id="/hiking/72314">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-1 mt-4">
               <div class="container-fluid description">
@@ -18,7 +18,7 @@
                 <hr>
                 /hiking/id avec <span class="font-weight-bold">id</span> correspondant à l'id d'un chemin de randonnées.
                 <br><br>
-                Exemple: <pre>/hiking/921410</pre>
+                Exemple: <pre>/hiking/72314</pre>
               </div>
             </div>
           </ng-template>
@@ -32,8 +32,8 @@
                 <hr>
                 <pre>
 {{ '{' }}
-  "description": "chantage matinal : pas de sortie famille sans myrtille ont prétexte les grands.sur les conseils de panic, je reste su' l'idée d'aller au lac de Maucapera, en mode recup.au total, truites, baignade, pique nique et belle cueillette de myrtilles et framboises.y'en a eu pour tout le monde!!!!!depuis le pont de Budearous, montée rive droite vers la cabane de Peyrahite, puis de Maucapera  et enfin le lac.descente rive gauche du déversoir en restant toujours gauche jusqu'au parking.sec",
-  "name": "Montée au  lac de Maucapéra"
+    "description": "Stationnement à Pré Richard, à proximité de l'aire d'arrivée du télésiège. A partir de Bernex, on atteint Pré Richard en passant par le hameau de Trossy et en dépassant Malpasset et la Fétuère (route généralement fermée en hiver). (D/A) Partir au Sud et, à proximité de cabanes de départ de téléskis, prendre la piste sur la gauche (Est) qui s'élève d'abord en pente douce. Après le virage en épingle à cheveux sur la droite et avant les chalets, quitter la piste et prendre à gauche un sentier qui aboutit à un carrefour. (1) Suivre à gauche une piste qui passe sous la ligne du télésiège du petit Combet puis vire à droite et devient raide. Elle fait un net virage à gauche et la pente s'adoucit jusqu'au départ du télésiège de Pelluaz (La Combe). (2) Dépasser les installations du télésiège et poursuivre Est-Nord-Est. La piste contourne une mare par la gauche puis devient raide et s'oriente au Sud. Passer sous la ligne du télésiège de Pelluaz et aboutir à un collet. (3) Du collet, prendre un sentier sur la droite (Ouest). Passer à la table d'orientation tout de suite sur la droite puis rejoindre la crête. Ignorer un sentier qui descend sur la droite, poursuivre le cheminement très agréable en crête vers l'Ouest et atteindre la Tête des Fieux. (4) Prendre sur la droite un sentier raide qui descend en forêt (panneau). Aboutir au sommet d'une combe, à proximité de l'arrivée du téléski de l'Arête. (5) Prendre sur la gauche le sentier qui descend vers le Col des Boeufs (panneau) et laisser l'arrivée du téléski à main droite. (6) Du Col, s'engager dans une pente herbeuse en direction du Mont Baron (panneau). Atteindre le sommet après plusieurs lacets. (7) Entamer la descente par le même chemin et, après quelques dizaines de mètres, s'engager dans un sentier qui part sur la droite et conduit à un petit couloir. Descendre ce dernier sans aucune difficulté et poursuivre le sentier vers la droite (Ouest). Déboucher dans des alpages. (8) A la croisée de sentiers, prendre sur la droite à angle aigu un sentier en direction de l'aplomb du Mont Baron (panneau). Le sentier pénètre en forêt. Un balisage Jaune se perd et le sentier est très peu marqué. Suivre un cheminement plein Est en forêt jusqu'à déboucher à nouveau en prairie, à l'arrivée du téléski du Baron. (9) Descendant en demeurant sous la ligne de téléski ou légèrement sur sa droite. S'écarter ensuite du téléski par la droite et rejoindre en sous-bois une piste plus large. Suivre celle-ci à l'Est jusqu'au départ de téléskis. Retrouver à gauche le parking de départ (D/A).Points de passage : D/A : km 0 - alt. 1339m - Pré Richard 1 : km 0.77 - alt. 1432m - Bifurcation 2 : km 1.58 - alt. 1543m - La Combe 3 : km 2.57 - alt. 1745m - Collet entre Pointe de Pelluaz et Tête des Fieux 4 : km 3.29 - alt. 1737m - Tête des Fieux 5 : km 4.14 - alt. 1513m - Sommet d'une combe - Téléski de l'Arête 6 : km 5.08 - alt. 1434m - Col des Boeufs 7 : km 5.62 - alt. 1529m - Mont Baron 8 : km 6.3 - alt. 1434m - Croisée de chemins dans les pâturages 9 : km 6.94 - alt. 1430m - Arrivée du téléski du Baron D/A : km 8.02 - alt. 1339m - Pré Richard",
+    "name": "Tête des Fieux et Mont Baron"
 {{ '}' }}</pre>
               </div>
             </div>
@@ -44,31 +44,14 @@
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
               <div class="container-fluid description">
-                <div class="row">
-                  <div class="col-6">
-                    Exemple de body :
-                    <hr>
-                    <pre>{{ '{' }}
+                  Exemple de body :
+                  <hr>
+                  <pre>{{ '{' }}
   "entities": [
-    "http://fr.dbpedia.org/resource/Lac",
-    "http://fr.dbpedia.org/resource/Paris",
-    "http://fr.dbpedia.org/resource/Pau"
+    "http://fr.dbpedia.org/resource/Bernex_(Genève)",
+    "http://fr.dbpedia.org/resource/Barrage_de_Malpasset"
   ]
 {{ '}' }}</pre>
-                  </div>
-                  <div class="col-6">
-                    Exemple d'erreur de retour :
-                    <hr>
-                    Si les entités sont vide :
-                    <pre>{{ '{' }}
-  "status": "no entities key found in json"
-{{ '}' }}</pre>
-                    Si aucunes coordonnées n'exite pour les entités fournis :
-                    <pre>{{ '{' }}
-  "status": "no coordinates found"
-{{ '}' }}</pre>
-                  </div>
-                </div>
               </div>
             </div>
           </ng-template>
@@ -83,14 +66,14 @@
                 <pre>{{ '{' }}
   "coords": [
     {{ '{' }}
-      "latitude": "48.856578",
-      "longitude": "2.351828",
-      "uri": "http://fr.dbpedia.org/resource/Paris"
+        "latitude": "46.166688",
+        "longitude": "6.066644",
+        "uri": "http://fr.dbpedia.org/resource/Bernex_(Genève)"
     {{ '}' }},
     {{ '{' }}
-        "latitude": "43.3017",
-        "longitude": "-0.3686",
-        "uri": "http://fr.dbpedia.org/resource/Pau"
+        "latitude": "43.51224",
+        "longitude": "6.757",
+        "uri": "http://fr.dbpedia.org/resource/Barrage_de_Malpasset"
     {{ '}' }}
   ]
 {{ '}' }}</pre>
@@ -103,53 +86,24 @@
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
               <div class="container-fluid description">
-                <div class="row">
-                  <div class="col-3">
-                    Exemple de body :
-                    <hr>
-                    <pre>{{ '{' }}
+                Exemple de body :
+                <hr>
+                <pre>{{ '{' }}
   "boundingbox": {{ '{' }}
     "ne": {{ '{' }}
-      "lng": 2.351828,
-      "lat": 48.856578
+      "lng": 6.757,
+      "lat": 46.166688
     {{ '}' }},
     "sw": {{ '{' }}
-      "lng": -0.3686,
-      "lat": 43.3017
+      "lng": 6.066644,
+      "lat": 43.51224
     {{ '}' }}
+  {{ '}' }},
+  "date": {{ '{' }}
+    "start": "2019-03-11",
+    "end": "2019-04-01"
   {{ '}' }}
 {{ '}' }}</pre>
-                  </div>
-                  <div class="col-5">
-                    Exemple de retour :
-                    <hr>
-                    L'image va être téléchargé :
-                    <pre>{{ '{' }}
-  "name": "name",
-  "status": "Images found, wait for the download"
-{{ '}' }}</pre>
-                    L'image est en cours de téléchargement :
-                    <pre>{{ '{' }}
-  "name": "name",
-  "status": "Image is already downloading"
-{{ '}' }}</pre>
-                  </div>
-                  <div class="col-4">
-                    L'image est téléchargé :
-                    <pre>{{ '{' }}
-  "name": "name",
-  "status": "Image already downloaded"
-{{ '}' }}</pre>
-                  Le format du json est incorrect :
-                  <pre>{{ '{' }}
-  "status": "Wrong json format for coords"
-{{ '}' }}</pre>
-                  Aucune images n'existe dans PEPS :
-                  <pre>{{ '{' }}
-  "status": "No images found on peps"
-{{ '}' }}</pre>
-                  </div>
-                </div>
               </div>
             </div>
           </ng-template>
@@ -165,8 +119,7 @@
                       Exemple de body :
                       <hr>
                       <pre>{{ '{' }}
-  "name": "45646132-f1e6-51b5-8be7-eb17d8171c5f",
-  "status": "Image already downloaded"
+  "name": "03d771d9-eb6f-5439-8b31-18cd9a547718"
 {{ '}' }}</pre>
                     </div>
                   </div>
@@ -181,7 +134,7 @@
                       <hr>
                       /tiles/status/name avec <span class="font-weight-bold">name</span> correspondant au name d'une image.
                       <br><br>
-                      Exemple : <pre>/tiles/status/45646132-f1e6-51b5-8be7-eb17d8171c5f</pre>
+                      Exemple : <pre>/tiles/status/03d771d9-eb6f-5439-8b31-18cd9a547718</pre>
                     </div>
                   </div>
                 </ng-template>
@@ -198,9 +151,7 @@
                 Exemple de body :
                 <hr>
                 <pre>{{ '{' }}
-    "imgName": "45646132-f1e6-51b5-8be7-eb17d8171c5f",
-    "status": "Tiles are totally computed !",
-    "statusCode": "TOTALLY_COMPUTED"
+    "imgName": "03d771d9-eb6f-5439-8b31-18cd9a547718"
 {{ '}' }}</pre>
               </div>
             </div>
@@ -210,17 +161,12 @@
         <ngb-tab title="/metadata" id="/metadata">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
-              <div class="container-fluid">
-                <div class="col-6 offset-3 align-middle description">
-                  <table class="table table-bordered text-center">
-                    <tbody>
-                      <tr>
-                        <td>:id</td>
-                        <td>Exemple: 921410</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div class="container-fluid description">
+                Exemple de body :
+                <hr>
+                <pre>{{ '{' }}
+    "name": "03d771d9-eb6f-5439-8b31-18cd9a547718"
+{{ '}' }}</pre>
               </div>
             </div>
           </ng-template>
@@ -229,17 +175,21 @@
         <ngb-tab title="/elasticsearch" id="/elasticsearch">
           <ng-template ngbTabContent>
             <div class="jumbotron jumbotron-fluid pt-2 pb-2 mt-4">
-              <div class="container-fluid">
-                <div class="col-6 offset-3 align-middle description">
-                  <table class="table table-bordered text-center">
-                    <tbody>
-                      <tr>
-                        <td>:id</td>
-                        <td>Exemple: 921410</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div class="container-fluid description">
+                Exemple de body :
+                <hr>
+                <pre>{{ '{' }}
+  "boundingbox": {{ '{' }}
+    "ne": {{ '{' }}
+      "lng": 6.757,
+      "lat": 46.166688
+    {{ '}' }},
+    "sw": {{ '{' }}
+      "lng": 6.066644,
+      "lat": 43.51224
+    {{ '}' }}
+  {{ '}' }},
+{{ '}' }}</pre>
               </div>
             </div>
           </ng-template>

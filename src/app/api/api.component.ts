@@ -23,7 +23,7 @@ export class ApiComponent implements OnInit {
   public isCollapsed = true;
 
   // Lien vers l'api scala entré par l'utilisateur
-  public apiLink = "/hiking/921410";
+  public apiLink = "/hiking/72314";
   // Json response
   public jsonResponse = null;
   // Body bodyRequest
@@ -55,7 +55,7 @@ export class ApiComponent implements OnInit {
 
   getApiLink(ngbTabChangeEvent: NgbTabChangeEvent){
     this.apiLink = ngbTabChangeEvent.nextId;
-    this.body = !(this.apiLink == "/hiking/921410" || this.apiLink == "/tiles/status/");
+    this.body = !(this.apiLink == "/hiking/72314" || this.apiLink == "/tiles/status/");
     this.jsonResponse = null;
     this.bodyRequest = this.mapBodyRequest[this.apiLink];
   }
